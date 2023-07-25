@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphique au citron</title>
+    <style>
+        body {
+            background-color: grey;
+            font-family: sans-serif;
+        }
+        pie-chart {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <pie-chart id="demo" data="40;30;30;20;10;10" gap="0.06" donut="0.2" labels="Jaune;Vert;Orange;Bleu;Rouge;Bleu clair"></pie-chart>
+    <pie-chart data="10;10;10;20;40;30;20;40;22.2" colors="hsl(0 0% 8.5%); hsl(0 0% 11.0%); hsl(0 0% 13.6%); hsl(0 0% 15.8%); hsl(0 0% 17.9%); hsl(0 0% 20.5%); hsl(0 0% 24.3%);"></pie-chart>
+    <script>
+        const demo = document.querySelector('#demo')
+        demo.addEventListener('sectionhover', e => {
+            console.log('Survolé', e.detail)
+        })
+    </script>
+</body>
+</html>
